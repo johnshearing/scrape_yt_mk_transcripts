@@ -1,0 +1,51 @@
+Run command for _process_channel_videos02.py
+python3 _process_channel_videos02.py "https://www.youtube.com/@abrahamhickstips/videos" --start-index 189
+
+Linux command: List files in order of creation:
+ls -lt
+
+Linux command: Count the files in a directory:
+find . -maxdepth 1 -type f | wc -l
+
+
+Linux command: Create a python virtual environment:
+python3 -m venv yascrape_env
+
+
+Linux command: Activate a python virtual environment:
+source ./yascrape_env/bin/activate
+
+
+Linux command: Install project dependencies within a virtual environment:
+pip install <some_package>
+
+
+Linux command: Save dependencies to a file:
+pip freeze > requirements.txt
+
+
+Linux command: Recreate an environment:
+pip install -r requirements.txt
+
+
+Linux command: Activate a virtual environment:
+source yascrape_env/bin/activate
+
+
+Linux command: Deactivate a virtual environment:
+deactivate
+
+
+Linux command: Change the prompt:
+export PS1="(yascrape_env) "
+
+
+Bash command to convert a wav file to an MP4 file:
+ffmpeg -loop 1 -framerate 2 -i ./../_Abraham.jpg -i v51Es-7RKig.wav \
+-vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" \
+-c:v libx264 -tune stillimage -c:a aac -b:a 192k \
+-shortest -pix_fmt yuv420p -movflags +faststart output.mp4
+
+
+Inspect your .wav file format:
+ffprobe your_audio.wav

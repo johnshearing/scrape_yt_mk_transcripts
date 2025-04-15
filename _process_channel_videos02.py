@@ -2,6 +2,10 @@
 
 # Creates a list of all videos for a YouTube channel and passes each list item (a video) to _merged04.py for processing.
 
+# The following is a sample run command.
+# The start index should be zero or where ever you want to start in the list of videos.
+# python3 _process_channel_videos02.py "https://www.youtube.com/@abrahamhickstips/videos" --start-index 1
+
 import argparse
 import os
 import subprocess
