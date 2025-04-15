@@ -1,5 +1,7 @@
-Run command for _process_channel_videos02.py
-python3 _process_channel_videos02.py "https://www.youtube.com/@abrahamhickstips/videos" --start-index 189
+
+# The following is a sample run command for _process_channel_videos02.py.
+# The start index should be zero or where ever you want to start in the list of videos.
+python3 _process_channel_videos02.py "https://www.youtube.com/@abrahamhickstips/videos" --start-index 0
 
 Linux command: List files in order of creation:
 ls -lt

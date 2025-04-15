@@ -4,7 +4,7 @@
 
 # The following is a sample run command.
 # The start index should be zero or where ever you want to start in the list of videos.
-# python3 _process_channel_videos02.py "https://www.youtube.com/@abrahamhickstips/videos" --start-index 1
+# python3 _process_channel_videos02.py "https://www.youtube.com/@abrahamhickstips/videos" --start-index 0
 
 import argparse
 import os
