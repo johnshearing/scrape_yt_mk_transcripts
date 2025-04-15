@@ -1,3 +1,14 @@
+Linux command: Create a python virtual environment:
+python3 -m venv yascrape_env
+
+
+Linux command: Activate a python virtual environment:
+source ./yascrape_env/bin/activate
+
+
+Linux command: Recreate an environment:
+pip install -r requirements.txt
+
 
 # The following is a sample run command for _process_channel_videos02.py.
 # The start index should be zero or where ever you want to start in the list of videos.
@@ -10,28 +21,12 @@ Linux command: Count the files in a directory:
 find . -maxdepth 1 -type f | wc -l
 
 
-Linux command: Create a python virtual environment:
-python3 -m venv yascrape_env
-
-
-Linux command: Activate a python virtual environment:
-source ./yascrape_env/bin/activate
-
-
 Linux command: Install project dependencies within a virtual environment:
 pip install <some_package>
 
 
 Linux command: Save dependencies to a file:
 pip freeze > requirements.txt
-
-
-Linux command: Recreate an environment:
-pip install -r requirements.txt
-
-
-Linux command: Activate a virtual environment:
-source yascrape_env/bin/activate
 
 
 Linux command: Deactivate a virtual environment:
