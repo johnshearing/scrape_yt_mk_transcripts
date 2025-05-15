@@ -1,0 +1,58 @@
+This project produces punctuated, diarized transcripts with metadata which are ingested by the LightRAG server which is found a the following repository:
+https://github.com/johnshearing/deep_avatar
+The repostitory linked above is used to create question and answer pairs which are used to train LLMs to emulate a human model.
+
+
+If you are interested in Retrieval Augmented Generation then I recommend LightRAG and VideoRAG GitHub repositories linked below.
+https://github.com/HKUDS/LightRAG
+https://github.com/HKUDS/VideoRAG
+
+
+Linux command: Create a python virtual environment:
+python3 -m venv yascrape_env
+
+
+Linux command: Activate a python virtual environment:
+source ./yascrape_env/bin/activate
+
+
+Linux command: Recreate an environment:
+pip install -r requirements.txt
+
+
+# The following is a sample run command for _process_channel_videos02.py.
+# The start index should be zero or where ever you want to start in the list of videos.
+python3 _process_channel_videos02.py "https://www.youtube.com/@abrahamhickstips/videos" --start-index 0
+
+Linux command: List files in order of creation:
+ls -lt
+
+Linux command: Count the files in a directory:
+find . -maxdepth 1 -type f | wc -l
+
+
+Linux command: Install project dependencies within a virtual environment:
+pip install <some_package>
+
+
+Linux command: Save dependencies to a file:
+pip freeze > requirements.txt
+
+
+Linux command: Deactivate a virtual environment:
+deactivate
+
+
+Linux command: Change the prompt:
+export PS1="(yascrape_env) "
+
+
+Bash command to convert a wav file to an MP4 file:
+ffmpeg -loop 1 -framerate 2 -i ./../_blank.jpg -i v51Es-7RKig.wav \
+-vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" \
+-c:v libx264 -tune stillimage -c:a aac -b:a 192k \
+-shortest -pix_fmt yuv420p -movflags +faststart output.mp4
+
+
+Inspect your .wav file format:
+ffprobe your_audio.wav

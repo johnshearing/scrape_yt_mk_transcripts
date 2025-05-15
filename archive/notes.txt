@@ -1,0 +1,9 @@
+
+This command returns the audio of a YouTube video as a .wav file
+yt-dlp -x --audio-format wav "https://www.youtube.com/watch?v=z7kLfGkR7gk"
+
+This command returns json with a punctuated transcripts and a timestamped transcript.
+whisper "Quiet Your Mind & You Will Receive Life-Changing Impulses[z7kLfGkR7gk].wav" --model medium --output_format json
+
+This command identifies the speakers in a wav file and provides a list of timestamps showing when each is speaking
+python3 annote02.py
