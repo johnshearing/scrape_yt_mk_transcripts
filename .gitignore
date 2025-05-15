@@ -1,12 +1,14 @@
 # Ignore everything
 *
 
-# But include all files in the root directory
+# Don't ignore files and subdirectories in the root directory
 !*
 
-# Re-ignore all subdirectories
+# Re-ignore all subdirectories in the root directory
 */
 
-# Except for archive directory
+# Don't ignore archive directory
 !/archive/
+
+# Don't ignore the files and subdirectories in the archive directory
 !/archive/**
