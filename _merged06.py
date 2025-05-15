@@ -130,12 +130,12 @@ txt_output = f"{video_id}.txt"
 try:
     # Build metadata lines as natural language sentences
     metadata_lines = [
-        f"The language spoken in this video is {whisper_data['language']}.",
-        f"The video platform where this video was sourced is {metadata['url'].split('/')[2].split('?')[0]}.",
-        f"The channel name from which this video was sourced is {metadata['channelName']}.",
-        f"The title of the video is {metadata['videoTitle']}.",
-        f"The URL where this video can be viewed is {metadata['url']}.",
-        f"The video was posted on {metadata['videoPostDate']}."
+        f"The video URL is {metadata['url']}.",        
+        f"The video platform is {metadata['url'].split('/')[2].split('?')[0]}.",
+        f"The video channel is {metadata['channelName']}.",
+        f"The video title is {metadata['videoTitle']}.",
+        f"The video was posted on {metadata['videoPostDate']}.",
+        f"The video language is {whisper_data['language']}."        
     ]
 
     # Build segments with rounded timestamps

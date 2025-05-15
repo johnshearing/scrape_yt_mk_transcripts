@@ -1,3 +1,5 @@
+This is the only valid directory for the project. yascrape and yascrape_bu will be deleted after testing the project from this directory.
+
 This project produces punctuated, diarized transcripts with metadata which are ingested by the LightRAG server which is found a the following repository:
 https://github.com/johnshearing/deep_avatar
 The repostitory linked above is used to create question and answer pairs which are used to train LLMs to emulate a human model.
