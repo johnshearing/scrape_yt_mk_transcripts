@@ -178,9 +178,9 @@ try:
         ],
         "entities": [
             {
-                "entity_name": "source_data-global-hub",
-                "entity_type": "source_data-global-hub",
-                "description": "The source_data-global-hub entity provides a central node which joins all source_data-hub entities using edge relationships. source_data-global-hub is the set of all source_data-hub entities",
+                "entity_name": "source-data-global-hub",
+                "entity_type": "source-data-global-hub",
+                "description": "The source-data-global-hub entity provides a central node which joins all source_data-hub entities using edge relationships. source-data-global-hub is the set of all source_data-hub entities",
                 "source_id": f"{video_id}_metadata.json"
             },
             {
@@ -312,10 +312,10 @@ try:
                 "source_id": f"{video_id}_metadata.json"
             },
             {
-                "src_id": "source_data-global-hub",
+                "src_id": "source-data-global-hub",
                 "tgt_id": f"{video_id}.txt",                
-                "description": f"The {video_id}.txt belongs to the set of source_data-global-hub",
-                "keywords": "element of source_data-global-hub",
+                "description": f"The {video_id}.txt belongs to the set of source-data-global-hub",
+                "keywords": "element of source-data-global-hub",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             },            
