@@ -178,15 +178,21 @@ try:
         ],
         "entities": [
             {
+                "entity_name": "source_data-global-hub",
+                "entity_type": "source_data-global-hub",
+                "description": "The source_data-global-hub entity provides a central node which joins all source_data-hub entities using edge relationships. source_data-global-hub is the set of all source_data-hub entities",
+                "source_id": f"{video_id}_metadata.json"
+            },
+            {
                 "entity_name": "metadata-global-hub",
                 "entity_type": "metadata-global-hub",
                 "description": "The metadata-global-hub entity provides a central node which joins all metadata-hub entities using edge relationships. metadata-global-hub is the set of all metadata-hub entities",
                 "source_id": f"{video_id}_metadata.json"
-            },
+            },            
             {
                 "entity_name": f"metadata-hub-{video_id}.txt",
                 "entity_type": "metadata-hub",
-                "description": f"The metadata-hub-{video_id}.txt entity provides a central node which joins all metadata entities for the source document {video_id}.txt.",
+                "description": f"The metadata-hub-{video_id}.txt entity provides a path to all metadata entities for the source document {video_id}.txt.",
                 "source_id": f"{video_id}_metadata.json"
             },
             {
@@ -298,13 +304,21 @@ try:
                 "source_id": f"{video_id}_metadata.json"
             },
             {
-                "src_id": f"metadata-hub-{video_id}.txt",
-                "tgt_id": "metadata-global-hub",
+                "src_id": "metadata-global-hub",
+                "tgt_id": f"metadata-hub-{video_id}.txt",                
                 "description": f"The metadata-hub-{video_id}.txt belongs to the set of metadata-global-hub",
                 "keywords": "element of metadata-global-hub",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             },
+            {
+                "src_id": "source_data-global-hub",
+                "tgt_id": f"{video_id}.txt",                
+                "description": f"The {video_id}.txt belongs to the set of source_data-global-hub",
+                "keywords": "element of source_data-global-hub",
+                "weight": 7.0,
+                "source_id": f"{video_id}_metadata.json"
+            },            
             {
                 "src_id": f"metadata-hub-{video_id}.txt",
                 "tgt_id": f"{video_id}.txt",
@@ -312,7 +326,7 @@ try:
                 "keywords": f"metadata for {video_id}.txt",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
-            },
+            },            
             {
                 "src_id": f"metadata-hub-{video_id}.txt",
                 "tgt_id": metadata_values['VIDEO_URL'],
