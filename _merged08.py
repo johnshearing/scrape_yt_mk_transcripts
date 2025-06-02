@@ -178,63 +178,63 @@ try:
         ],
         "entities": [
             {
-                "entity_name": "source-data-global-hub",
-                "entity_type": "source-data-global-hub",
-                "description": "The source-data-global-hub entity provides a central node which joins all source_data-hub entities using edge relationships. source-data-global-hub is the set of all source_data-hub entities",
+                "entity_name": "source-document-global-hub",
+                "entity_type": "source-document-global-hub",
+                "description": "The source-document-global-hub joins all source documents via edge relationships. source-document-global-hub can be referenced to list all source documents",
                 "source_id": f"{video_id}_metadata.json"
             },
             {
                 "entity_name": "metadata-global-hub",
                 "entity_type": "metadata-global-hub",
-                "description": "The metadata-global-hub entity provides a central node which joins all metadata-hub entities using edge relationships. metadata-global-hub is the set of all metadata-hub entities",
+                "description": "The metadata-global-hub joins all metadata-hub entities using edge relationships. metadata-global-hub can be referenced to list all metadata-hubs",
                 "source_id": f"{video_id}_metadata.json"
             },            
             {
                 "entity_name": f"metadata-hub-{video_id}.txt",
                 "entity_type": "metadata-hub",
-                "description": f"The metadata-hub-{video_id}.txt entity provides a path to all metadata entities for the source document {video_id}.txt.",
+                "description": f"The metadata-hub-{video_id}.txt is a meta-data-hub. All metadata for the source document {video_id}.txt can be located by referencing metadata-hub-{video_id}.txt",
                 "source_id": f"{video_id}_metadata.json"
             },
             {
                 "entity_name": f"{video_id}.txt",
                 "entity_type": "source-document",
-                "description": f"The {video_id}.txt entity provides a node which links all entities from the {video_id}.txt source document to the metadata-hub-{video_id}.txt entity",
+                "description": f"{video_id}.txt is the file name of a source document used to populate this index with information. {video_id}.txt contains a video transcript",
                 "source_id": f"{video_id}_metadata.json"
             },
             {
                 "entity_name": metadata_values['VIDEO_URL'],
                 "entity_type": f"metadata-for-{video_id}.txt",
-                "description": "URL for the video.",
+                "description": "URL for source video",
                 "source_id": f"{video_id}_metadata.json"
             },
             {
                 "entity_name": metadata_values['VIDEO_PLATFORM'],
                 "entity_type": f"metadata-for-{video_id}.txt",
-                "description": "video platform which hosted the video.",
+                "description": "video platform which hosted the source video.",
                 "source_id": f"{video_id}_metadata.json"
             },
             {
                 "entity_name": metadata_values['VIDEO_CHANNEL'],
                 "entity_type": f"metadata-for-{video_id}.txt",
-                "description": "Video channel which published the video.",
+                "description": "Video channel which published the source video.",
                 "source_id": f"{video_id}_metadata.json"
             },
             {
                 "entity_name": metadata_values['VIDEO_TITLE'],
                 "entity_type": f"metadata-for-{video_id}.txt",
-                "description": "Video title",
+                "description": "Video title for source video",
                 "source_id": f"{video_id}_metadata.json"
             },
             {
                 "entity_name": metadata_values['VIDEO_POST_DATETIME'],
                 "entity_type": f"metadata-for-{video_id}.txt",
-                "description": "Date video was posted.",
+                "description": "Date source video was posted.",
                 "source_id": f"{video_id}_metadata.json"
             },
             {
                 "entity_name": metadata_values['VIDEO_LANGUAGE'],
                 "entity_type": f"metadata-for-{video_id}.txt",
-                "description": "Language spoken in the video",
+                "description": "Language spoken in the source video",
                 "source_id": f"{video_id}_metadata.json"
             }
         ],
@@ -242,32 +242,32 @@ try:
             {
                 "src_id": metadata_values['VIDEO_URL'],
                 "tgt_id": metadata_values['VIDEO_PLATFORM'],
-                "description": f"The video found at the URL {metadata_values['VIDEO_URL']} was hosted by {metadata_values['VIDEO_PLATFORM']} platform",
-                "keywords": "video URL host platform",
+                "description": f"The source video found at the URL {metadata_values['VIDEO_URL']} was hosted by {metadata_values['VIDEO_PLATFORM']} platform",
+                "keywords": "source video URL host platform",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             },
             {
                 "src_id": metadata_values['VIDEO_URL'],
                 "tgt_id": metadata_values['VIDEO_CHANNEL'],
-                "description": f"The video found at URL {metadata_values['VIDEO_URL']} was produced by the {metadata_values['VIDEO_CHANNEL']} video channel",
-                "keywords": "video URL channel produced",
+                "description": f"The source video found at URL {metadata_values['VIDEO_URL']} was produced by the {metadata_values['VIDEO_CHANNEL']} video channel",
+                "keywords": "source video URL channel produced",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             },
             {
                 "src_id": metadata_values['VIDEO_URL'],
                 "tgt_id": metadata_values['VIDEO_TITLE'],
-                "description": f"The video at URL {metadata_values['VIDEO_URL']} is titled {metadata_values['VIDEO_TITLE']}",
-                "keywords": "video URL title",
+                "description": f"The source video at URL {metadata_values['VIDEO_URL']} is titled {metadata_values['VIDEO_TITLE']}",
+                "keywords": "source video URL title",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             },
             {
                 "src_id": metadata_values['VIDEO_URL'],
                 "tgt_id": metadata_values['VIDEO_POST_DATETIME'],
-                "description": f"The video at URL {metadata_values['VIDEO_URL']} was posted at the date and time of {metadata_values['VIDEO_POST_DATETIME']}",
-                "keywords": "video URL posted date time",
+                "description": f"The source video at URL {metadata_values['VIDEO_URL']} was posted at the date and time of {metadata_values['VIDEO_POST_DATETIME']}",
+                "keywords": "source video URL posted date time",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             },
@@ -312,10 +312,10 @@ try:
                 "source_id": f"{video_id}_metadata.json"
             },
             {
-                "src_id": "source-data-global-hub",
+                "src_id": "source-document-global-hub",
                 "tgt_id": f"{video_id}.txt",                
-                "description": f"The {video_id}.txt belongs to the set of source-data-global-hub",
-                "keywords": "element of source-data-global-hub",
+                "description": f"{video_id}.txt belongs to the set of source-document-global-hub",
+                "keywords": "element of source-document-global-hub",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             },            
@@ -330,7 +330,7 @@ try:
             {
                 "src_id": f"metadata-hub-{video_id}.txt",
                 "tgt_id": metadata_values['VIDEO_URL'],
-                "description": f"The URL {metadata_values['VIDEO_URL']} is metadata which belongs to metadata-hub-{video_id}.txt",
+                "description": f"metadata-hub-{video_id}.txt is the metadata hub for the URL {metadata_values['VIDEO_URL']}",                
                 "keywords": f"URL metadata-hub-{video_id}.txt",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
@@ -338,7 +338,7 @@ try:
             {
                 "src_id": f"metadata-hub-{video_id}.txt",
                 "tgt_id": metadata_values['VIDEO_PLATFORM'],
-                "description": f"The video platform {metadata_values['VIDEO_PLATFORM']} is metadata which belongs to metadata-hub-{video_id}.txt",
+                "description": f"metadata-hub-{video_id}.txt is the metadata hub for the video platform {metadata_values['VIDEO_PLATFORM']}",                
                 "keywords": f"video platform metadata-hub-{video_id}.txt",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
@@ -346,7 +346,7 @@ try:
             {
                 "src_id": f"metadata-hub-{video_id}.txt",
                 "tgt_id": metadata_values['VIDEO_CHANNEL'],
-                "description": f"The video channel {metadata_values['VIDEO_CHANNEL']} is metadata which belongs to metadata-hub-{video_id}.txt",
+                "description": f"metadata-hub-{video_id}.txt is the metadata hub for the video channel {metadata_values['VIDEO_CHANNEL']}",                 
                 "keywords": f"video channel metadata-hub-{video_id}.txt",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
@@ -354,7 +354,7 @@ try:
             {
                 "src_id": f"metadata-hub-{video_id}.txt",
                 "tgt_id": metadata_values['VIDEO_TITLE'],
-                "description": f"The video titled {metadata_values['VIDEO_TITLE']} is metadata which belongs to metadata-hub-{video_id}.txt",
+                "description": f"metadata-hub-{video_id}.txt is the metadata hub for the video titled {metadata_values['VIDEO_TITLE']}",                
                 "keywords": f"video title metadata-hub-{video_id}.txt",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
@@ -362,7 +362,7 @@ try:
             {
                 "src_id": f"metadata-hub-{video_id}.txt",
                 "tgt_id": metadata_values['VIDEO_POST_DATETIME'],
-                "description": f"The video posting time and date of {metadata_values['VIDEO_POST_DATETIME']} is metadata which belongs to metadata-hub-{video_id}.txt",
+                "description": f"metadata-hub-{video_id}.txt is the metadata hub for the video posting time and date of {metadata_values['VIDEO_POST_DATETIME']}",                
                 "keywords": f"posting date time metadata-hub-{video_id}.txt",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
@@ -370,7 +370,7 @@ try:
             {
                 "src_id": f"metadata-hub-{video_id}.txt",
                 "tgt_id": metadata_values['VIDEO_LANGUAGE'],
-                "description": f"{metadata_values['VIDEO_LANGUAGE']}, the spoken language in the video is metadata which belongs to metadata-hub-{video_id}.txt",
+                "description": f"metadata-hub-{video_id}.txt is the metadata hub for {metadata_values['VIDEO_LANGUAGE']}, the spoken language in the video",                 
                 "keywords": f"{metadata_values['VIDEO_LANGUAGE']} spoken language metadata-hub-{video_id}.txt",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
