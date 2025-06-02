@@ -83,7 +83,7 @@ try:
             {
                 "entity_name": "metadata-global-hub",
                 "entity_type": "metadata-global-hub",
-                "description": "The metadata-global-hub joins all metadata-hub entities using edge relationships. metadata-global-hub can be referenced to list all metadata-hubs",
+                "description": "The metadata-global-hub joins all metadata-hub entities via edge relationships. metadata-global-hub can be referenced to list all metadata-hubs",
                 "source_id": f"{video_id}_metadata.json"
             },
             {
@@ -203,7 +203,7 @@ try:
             {
                 "src_id": "metadata-global-hub",
                 "tgt_id": f"metadata-hub-{video_id}.txt",
-                "description": f"The metadata-hub-{video_id}.txt belongs to the set of metadata-global-hub",
+                "description": f"The metadata-hub-{video_id}.txt is an element of the set metadata-global-hub",
                 "keywords": "element of metadata-global-hub",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
@@ -211,7 +211,7 @@ try:
             {
                 "src_id": "source-document-global-hub",
                 "tgt_id": f"{video_id}.txt",
-                "description": f"{video_id}.txt belongs to the set of source-document-global-hub",
+                "description": f"{video_id}.txt is an element of the set source-document-global-hub",
                 "keywords": "element of source-document-global-hub",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
