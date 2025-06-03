@@ -190,9 +190,9 @@ try:
                 "source_id": f"{video_id}_metadata.json"
             },
             {
-                "entity_name": f"metadata-hub-{video_id}.txt",
+                "entity_name": f"{video_id}_metadata.json",
                 "entity_type": "metadata-hub",
-                "description": f"The metadata-hub-{video_id}.txt is a meta-data-hub. All metadata for the source document {video_id}.txt can be located by referencing metadata-hub-{video_id}.txt",
+                "description": f"{video_id}_metadata.json is a meta-data-hub. All metadata for the source document {video_id}.txt can be located by referencing {video_id}_metadata.json",
                 "source_id": f"{video_id}_metadata.json"
             },
             {
@@ -305,8 +305,8 @@ try:
             },
             {
                 "src_id": "metadata-global-hub",
-                "tgt_id": f"metadata-hub-{video_id}.txt",
-                "description": f"The metadata-hub-{video_id}.txt is an element of the set metadata-global-hub",
+                "tgt_id": f"{video_id}_metadata.json",
+                "description": f"{video_id}_metadata.json is an element of the set metadata-global-hub",
                 "keywords": "element of metadata-global-hub",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
@@ -320,58 +320,58 @@ try:
                 "source_id": f"{video_id}_metadata.json"
             },
             {
-                "src_id": f"metadata-hub-{video_id}.txt",
+                "src_id": f"{video_id}_metadata.json",
                 "tgt_id": f"{video_id}.txt",
-                "description": f"metadata-hub-{video_id}.txt is the metadata hub for the source document {video_id}.txt",
+                "description": f"{video_id}_metadata.json is the metadata hub for the source document {video_id}.txt",
                 "keywords": f"metadata for {video_id}.txt",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             },
             {
-                "src_id": f"metadata-hub-{video_id}.txt",
+                "src_id": f"{video_id}_metadata.json",
                 "tgt_id": metadata_values['VIDEO_URL'],
-                "description": f"metadata-hub-{video_id}.txt is the metadata hub for the URL {metadata_values['VIDEO_URL']}",
-                "keywords": f"URL metadata-hub-{video_id}.txt",
+                "description": f"{video_id}_metadata.json is the metadata hub for the URL {metadata_values['VIDEO_URL']}",
+                "keywords": f"URL {video_id}_metadata.json",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             },
             {
-                "src_id": f"metadata-hub-{video_id}.txt",
+                "src_id": f"{video_id}_metadata.json",
                 "tgt_id": metadata_values['VIDEO_PLATFORM'],
-                "description": f"metadata-hub-{video_id}.txt is the metadata hub for the video platform {metadata_values['VIDEO_PLATFORM']}",
-                "keywords": f"video platform metadata-hub-{video_id}.txt",
+                "description": f"{video_id}_metadata.json is the metadata hub for the video platform {metadata_values['VIDEO_PLATFORM']}",
+                "keywords": f"video platform {video_id}_metadata.json",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             },
             {
-                "src_id": f"metadata-hub-{video_id}.txt",
+                "src_id": f"{video_id}_metadata.json",
                 "tgt_id": metadata_values['VIDEO_CHANNEL'],
-                "description": f"metadata-hub-{video_id}.txt is the metadata hub for the video channel {metadata_values['VIDEO_CHANNEL']}",
-                "keywords": f"video channel metadata-hub-{video_id}.txt",
+                "description": f"{video_id}_metadata.json is the metadata hub for the video channel {metadata_values['VIDEO_CHANNEL']}",
+                "keywords": f"video channel {video_id}_metadata.json",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             },
             {
-                "src_id": f"metadata-hub-{video_id}.txt",
+                "src_id": f"{video_id}_metadata.json",
                 "tgt_id": metadata_values['VIDEO_TITLE'],
-                "description": f"metadata-hub-{video_id}.txt is the metadata hub for the video titled {metadata_values['VIDEO_TITLE']}",
-                "keywords": f"video title metadata-hub-{video_id}.txt",
+                "description": f"{video_id}_metadata.json is the metadata hub for the video titled {metadata_values['VIDEO_TITLE']}",
+                "keywords": f"video title {video_id}_metadata.json",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             },
             {
-                "src_id": f"metadata-hub-{video_id}.txt",
+                "src_id": f"{video_id}_metadata.json",
                 "tgt_id": metadata_values['VIDEO_POST_DATETIME'],
-                "description": f"metadata-hub-{video_id}.txt is the metadata hub for the video posting time and date of {metadata_values['VIDEO_POST_DATETIME']}",
-                "keywords": f"posting date time metadata-hub-{video_id}.txt",
+                "description": f"{video_id}_metadata.json is the metadata hub for the video posting time and date of {metadata_values['VIDEO_POST_DATETIME']}",
+                "keywords": f"posting date time {video_id}_metadata.json",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             },
             {
-                "src_id": f"metadata-hub-{video_id}.txt",
+                "src_id": f"{video_id}_metadata.json",
                 "tgt_id": metadata_values['VIDEO_LANGUAGE'],
-                "description": f"metadata-hub-{video_id}.txt is the metadata hub for {metadata_values['VIDEO_LANGUAGE']}, the spoken language in the video",
-                "keywords": f"{metadata_values['VIDEO_LANGUAGE']} spoken language metadata-hub-{video_id}.txt",
+                "description": f"{video_id}_metadata.json is the metadata hub for {metadata_values['VIDEO_LANGUAGE']}, the spoken language in the video",
+                "keywords": f"{metadata_values['VIDEO_LANGUAGE']} spoken language {video_id}_metadata.json",
                 "weight": 7.0,
                 "source_id": f"{video_id}_metadata.json"
             }
